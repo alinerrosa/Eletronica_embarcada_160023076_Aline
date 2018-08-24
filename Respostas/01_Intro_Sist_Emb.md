@@ -1,8 +1,10 @@
 1)O que são sistemas embarcados?
 
-R: 
+R: Sistemas completos, independentes e reprogramáveis que que são encarregados de executar determinada função pré-determinada com requisitos específicos.
 
 2)O que são sistemas microprocesssados?
+
+R: Microprocessadores são circuitos integrados 
 
 3)Apresente aplicações de sistemas embarcados: (a) para a indústria automotiva; (b) para eletrodomésticos; (c) para automação industrial.
 
