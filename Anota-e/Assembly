@@ -1,0 +1,8 @@
+Diferente do MIPS, na MSP a segunda variável que guarda o valor
+MPS nao tem variável, apenas registradores
+Existem 16 registradores
+  As operações aritméticas são feitas em registradores
+  Vetores e matrizes são guardados em memória
+mov.w (word - 2byts)
+mov.b (byte menos significativo)
+O MSP é little-endian (o byte menos significativo fica na memória mais baixa)
