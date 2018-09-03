@@ -6,3 +6,4 @@ Existem 16 registradores
 mov.w (word - 2byts)
 mov.b (byte menos significativo)
 O MSP é little-endian (o byte menos significativo fica na memória mais baixa)
+Não dá pra repetir o Label
