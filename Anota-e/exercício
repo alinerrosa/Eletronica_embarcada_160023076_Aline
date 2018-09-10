@@ -1,12 +1,12 @@
 LISTA 06
 
-DIVISÃO
+DIVISÃO SEM SINAL
 ```C
-unsigned int divisao (unsigned int a, unsigned int b)
+unsigned int divisao_uns(unsigned int a, unsigned int b)
   {
     unsigned int c=0;
     if (b>0){
-    while (b<a){
+    while (b<=a){
       a-=b;
       c++      
       }
@@ -14,4 +14,69 @@ unsigned int divisao (unsigned int a, unsigned int b)
     return c;
   }
   ```
+``` ASSEMBLY
+  ; R15 = a, R14 = b, R4 = c
+divisao_uns: push R4; R4=c
+  clear R4; c=0
+  tst R14 ;testa se b=0
+  jz Div_uns_else ; pula se b=0
+Div_uns_while:cmp R14, R15 ;compara b e a 
+  jl Div_uns_else ;compara se R15 < R14
+  sub R14, R15
+  inc R4 ;incrementa c
+  jump Div_uns_while
+Div_uns_else: mov R4, R15
+  pop R4
+  ret
   
+  
+  ```
+DIVISÃO COM SINAL
+```C
+int Divisao(int a, int b)
+{
+  int sinal = 0, c;
+  if (a<0)
+  {
+    a=-a;
+    sinal ++;
+  }
+  if (b<0)
+  {
+     b=-b;
+    sinal ++;
+  }
+  c = divisao_uns (a,b);
+  if (sinal=1)
+      c=-c;
+  return c;
+}
+```
+
+```ASSEMBLY
+divisao: push R4 ;sinal
+         push R5 ;c 
+         clr R4  ; sinal =0
+divisao_a: cmp #0,R15
+           jge divisao_b
+           inv R15
+           inc R15 ;a=-a
+           inc R4 ;sinal++
+divisao_b: cmp #0, %14
+           jge divisao_c
+           inv R14
+           inc R14 ;b=-b
+           inc R4 :sinal++
+divisao_c: call divisao_uns
+           mov R15, R5
+           cmp #1, R4
+           jne divisao_end
+           jnr R5
+           jnc R5
+divisao_end: mov R5, R15
+             pop R5
+             pop R4
+             ret
+             
+             
+```
