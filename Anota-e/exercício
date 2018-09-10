@@ -1,0 +1,17 @@
+LISTA 06
+
+DIVISÃO
+```C
+unsigned int divisao (unsigned int a, unsigned int b)
+  {
+    unsigned int c=0;
+    if (b>0){
+    while (b<a){
+      a-=b;
+      c++      
+      }
+    }
+    return c;
+  }
+  ```
+  
