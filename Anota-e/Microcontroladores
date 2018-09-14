@@ -7,3 +7,4 @@ A MSP430 possui um
   Real-time clock que é capaz de passar a data real do dia
   ENDEREÇOS SEMPRE ESTÃO EM BASE HEXADECIMAL. Valores hexadecimais são precedidos por "0x" em linguagem C
   usa a arquitetura von Neumann 
+A descantagem do Assembly é que ela está intimmente ligada a um processador e se mostra diferente para cada arquitetura
