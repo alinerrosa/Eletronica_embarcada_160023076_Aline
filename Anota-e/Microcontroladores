@@ -1,0 +1,9 @@
+Microprocessadores são mais usados para aumentar o poder computacional de outra máquina
+
+A MSP430 possui um 
+  Wathdog timer é um recurso de segurança que redefine o processador se o programa ficar preso em um loop infinito
+  Nonvolatile memory for data é usado para armazenar dados quando a energia é removida (ex: serial numbers e network adress)
+  Conversor analógico-digital e digital-analógico
+  Real-time clock que é capaz de passar a data real do dia
+  ENDEREÇOS SEMPRE ESTÃO EM BASE HEXADECIMAL. Valores hexadecimais são precedidos por "0x" em linguagem C
+  usa a arquitetura von Neumann 
