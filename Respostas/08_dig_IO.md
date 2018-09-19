@@ -47,3 +47,24 @@ vetor_dec_end: pop R4
                mov #1, R15 
                ret
 ``` ASSEMBLY
+
+questao palindromo
+``` C
+int palindromo (int vetor [], int tamanho)
+{
+ int *vetor_end = vetor+tamanho-1;
+ 
+ for (; vetor<vetor_end; vetor++,vetor_end--)
+ {
+  if ((*vetor)!=(*vetor_end))
+   return 0;
+ }
+ return 1
+}
+```C
+
+``` ASSEMBLY
+
+
+``` ASSEMBLY
+
