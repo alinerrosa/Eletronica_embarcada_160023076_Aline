@@ -34,15 +34,18 @@ e)
 a)
   MOV.W R5, R12
   ADD.W R12, R5
+  
 b)
   MOV.W R6, R12
   ADD.W R12, R6
   ADD.W R12, R6
+  
 c)
   MOV.W R7, R12
   ADD.W R12, R7
   ADD.W R12, R7
   ADD.W R12, R7
+  
 d)
   
 e)
